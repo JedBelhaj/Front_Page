@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
-:root{
-    --animation-direction: 100%;
-}
 *{
     margin: 0;
     padding: 0;
@@ -34,12 +31,13 @@ body{
     flex-shrink: 3;
     margin-bottom: 3%;
     text-align: center;
-    width: 80%;
+    width: 60%;
     font-family: 'Secular One', sans-serif;
     font-size: 120px;
     transition: 0.5s ease-in-out;
 }
 #page1 h1:hover{
+    color: white;
     scale: 110%;
 }
 @keyframes load {
@@ -165,7 +163,7 @@ button a:hover:after {
 .circle{
     height: 700px;
     width: 700px;
-    position: absolute;
+    position: fixed;
     background-color: red;
     border-radius: 50%;
     scale: 80%;
@@ -189,14 +187,7 @@ button a:hover:after {
     right: 20%;
     top: 55%;
     background-color: blue;
-    animation: c 8s linear infinite;
-    animation-delay: 4s;
-}
-.d{
-    opacity: 0;
-    background-color: blueviolet;
-    right: 50%;
-    animation: d 5s linear infinite;
+    animation: c 10s linear infinite;
     animation-delay: 4s;
 }
 #page1 h1:hover > body{
@@ -217,7 +208,7 @@ button a:hover:after {
         opacity: 1;
     }
     100%{
-        transform: translate(var(--animation-direction),-200%);
+        transform: translate(100%,-200%);
         opacity: 0;
     }
 }
@@ -227,15 +218,6 @@ button a:hover:after {
     }
     100%{
         transform: translate(100%,-300%);
-        opacity: 0;
-    }
-}
-@keyframes d {
-    25%{
-        opacity: 1;
-    }
-    100%{
-        transform: translate(-10%,100%);
         opacity: 0;
     }
 }
