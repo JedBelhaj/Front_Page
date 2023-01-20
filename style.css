@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     transition: 0.5s;
 }
-html{
+
+html {
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
     height: 100%;
 }
-body{
+
+body {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -19,7 +22,8 @@ body{
     align-items: center;
     background-color: darksalmon;
 }
-#page1{
+
+#page1 {
     height: inherit;
     animation: load 1s ease-in-out;
     flex-direction: column;
@@ -27,32 +31,38 @@ body{
     align-items: center;
     justify-content: center;
 }
-#page1 h1{
+
+#page1 h1 {
     flex-shrink: 3;
     margin-bottom: 3%;
     text-align: center;
-    width: 60%;
+    max-width: 10ch;
     font-family: 'Secular One', sans-serif;
     font-size: 120px;
     transition: 0.5s ease-in-out;
 }
-#page1 h1:hover{
+
+#page1 h1:hover {
     color: white;
     scale: 110%;
 }
+
 @keyframes load {
-    0%{
+    0% {
         margin-right: 600px;
         opacity: 0;
     }
-    50%{
+
+    50% {
         margin-right: 0px;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
-#page1 a{
+
+#page1 a {
     animation: slide 1s ease-in-out;
     opacity: 1;
     flex-grow: 1;
@@ -60,31 +70,38 @@ body{
     font-weight: 200;
     font-size: 20px;
 }
-@keyframes slide{
-    0%{
+
+@keyframes slide {
+    0% {
         margin-top: 20px;
         opacity: 0;
     }
-    50%{
+
+    50% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
+
 @media only screen and (max-width: 700px) {
-    #page1 h1{
+    #page1 h1 {
         font-size: 400%;
     }
-    #page1 h5{
+
+    #page1 h5 {
         font-size: 15px;
     }
-    section.portfolio{
+
+    section.portfolio {
         scale: 70%;
     }
 }
+
 @media only screen and (max-width: 400px) {
-    .circle{
+    .circle {
         height: 400px;
         width: 400px;
         background-color: red;
@@ -93,18 +110,21 @@ body{
         right: 60%;
         opacity: 0;
     }
+
     .a {
         animation: x 5s linear infinite;
     }
-    .b{
+
+    .b {
         bottom: 10%;
         right: 10%;
         animation-delay: 2s;
         background-color: Green;
         animation: b 10s linear infinite;
         animation-delay: 2s;
-    
+
     }
+
     .c {
         opacity: 0;
         right: 20%;
@@ -113,24 +133,29 @@ body{
         animation: c 8s linear infinite;
         animation-delay: 4s;
     }
-    .d{
+
+    .d {
         opacity: 0;
         background-color: blueviolet;
         right: 50%;
         animation: d 5s linear infinite;
         animation-delay: 4s;
     }
-    #page1 h1{
+
+    #page1 h1 {
         font-size: 200%;
     }
-    #page1 h5{
+
+    #page1 h5 {
         font-size: 15px;
     }
 }
+
 div {
     height: 100%;
     position: absolute;
 }
+
 button {
     padding: 15px 25px;
     background: none;
@@ -139,10 +164,12 @@ button {
     border-style: solid;
     border-color: black;
 }
+
 button a {
     text-decoration: none;
     color: black;
 }
+
 button a::after {
     content: "";
     display: flex;
@@ -151,16 +178,19 @@ button a::after {
     background-color: black;
     transition: 0.5s;
 }
+
 button a:hover:after {
     width: 100%;
 }
+
 .mo {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: -1;
 }
-.circle{
+
+.circle {
     height: 700px;
     width: 700px;
     position: fixed;
@@ -170,10 +200,12 @@ button a:hover:after {
     right: 60%;
     opacity: 0;
 }
+
 .a {
     animation: x 5s linear infinite;
 }
-.b{
+
+.b {
     bottom: 10%;
     right: 10%;
     animation-delay: 2s;
@@ -182,6 +214,7 @@ button a:hover:after {
     animation-delay: 2s;
 
 }
+
 .c {
     opacity: 0;
     right: 20%;
@@ -190,38 +223,45 @@ button a:hover:after {
     animation: c 10s linear infinite;
     animation-delay: 4s;
 }
-#page1 h1:hover > body{
+
+#page1 h1:hover>body {
     background-color: black;
 }
 
 @keyframes x {
-    25%{
+    25% {
         opacity: 1;
     }
-    100%{
-        transform: translate(100%,100%);
+
+    100% {
+        transform: translate(100%, 100%);
         opacity: 0;
     }
 }
+
 @keyframes b {
-    25%{
+    25% {
         opacity: 1;
     }
-    100%{
-        transform: translate(100%,-200%);
+
+    100% {
+        transform: translate(100%, -200%);
         opacity: 0;
     }
 }
+
 @keyframes c {
-    25%{
+    25% {
         opacity: 1;
     }
-    100%{
-        transform: translate(100%,-300%);
+
+    100% {
+        transform: translate(100%, -300%);
         opacity: 0;
     }
 }
-section.portfolio{
+
+section.portfolio {
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(8px);
     background-color: rgba(0, 0, 0, 0.226);
@@ -230,26 +270,32 @@ section.portfolio{
     border-radius: 30px;
     padding: 30px;
 }
-section.portfolio h1,h4{
+
+section.portfolio h1,
+h4 {
     text-align: center;
     color: aliceblue;
     font-size: 90px;
     font-family: 'Secular One', sans-serif;
 }
-h4{
+
+h4 {
     margin-top: 20px;
     font-size: large;
     animation: scroll 4s ease-in-out infinite;
     animation-delay: 20s;
 }
+
 @keyframes scroll {
-    25%{
+    25% {
         margin-top: 40px;
     }
-    50%{
+
+    50% {
         margin-top: 0px;
     }
-    75%{
+
+    75% {
         margin-top: 60px;
     }
 }
